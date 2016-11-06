@@ -1,0 +1,41 @@
+@import './functions';
+
+
+$primary-color: #008cba;
+$secondary-color: #d42e12;
+$alert-color: #f04124;
+$success-color: #9ecb65;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
+$primary-hover-color: scale-color($primary-color, $lightness: -20%) !default;
+$secondary-hover-color: scale-color($secondary-color, $lightness: -20%) !default;
+$alert-hover-color: scale-color($alert-color, $lightness: -20%) !default;
+$success-hover-color: scale-color($success-color, $lightness: -20%) !default;
+$warning-hover-color: scale-color($warning-color, $lightness: -20%) !default;
+$info-hover-color: scale-color($info-color, $lightness: -20%) !default;
+
+
+$color-bg-action: $primary-color;
+$color-bg-danger: $secondary-color;
+$color-bg-warning: $warning-color;
+$color-bg-success: $success-color;
+
+
+$body-font-size: 16px;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: #000;
+$rem-base: $body-font-size;
+
+
+//notifications
+$notification-font-color: rgba(255, 255, 255, .75);
+
+//sizes
+$break-small: 500px;
+$break-medium: 700px;
+$break-large: 1200px;
+$small-up: 'only screen and (max-width : $break-small)';
+$medium-up: 'only screen and (min-width : $break-small)';
+$large-up: 'only screen and (min-width : $break-medium)';
+$verylarge-up: 'only screen and (min-width : $break-large)';

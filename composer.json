@@ -1,0 +1,114 @@
+{
+    "name": "CCNet Client Portal",
+    "type": "project",
+    "autoload": {
+        "psr-4": { "": "src/" },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "ssh://git@stash.mylaps.lan:7999/lib/symfony-foundationbundle.git"
+        },
+        {
+            "type": "git",
+            "url": "ssh://git@stash.mylaps.lan:7999/lib/mylaps-php-sdk.git"
+        },
+		    {
+            "type": "git",
+            "url": "ssh://git@stash.mylaps.lan:7999/ccnet/mylaps-php-ccnet-sdk.git"
+        },
+        {
+            "type": "git",
+            "url": "ssh://git@stash.mylaps.lan:7999/ccnet/symfony-ccnetbundle.git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "datatables/plugins",
+                "version": "1.0.4",
+                "source": {
+                    "url": "https://github.com/DataTables/Plugins.git",
+                    "type": "git",
+                    "reference": "c989064c4c3a58290f6c7e204a487f8dd7cf3fe9"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "datatables/responsive",
+                "version": "1.0.4",
+                "source": {
+                    "url": "https://github.com/DataTables/Responsive.git",
+                    "type": "git",
+                    "reference": "fe77ab3c1fc486a519827da48ccf50a7972da9f1"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "websanova/js-url",
+                "version": "1.8.6",
+                "source": {
+                    "url": "https://github.com/websanova/js-url.git",
+                    "type": "git",
+                    "reference": "ccc5961533b9d0e145dfe352c9c1707dfd2180e1"
+                }
+            }
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" }
+    },
+    "require": {
+      "php": ">=5.5.9",
+      "symfony/symfony": "3.1.*",
+      "doctrine/orm": "^2.5",
+      "doctrine/doctrine-bundle": "^1.6",
+      "doctrine/doctrine-cache-bundle": "^1.2",
+      "symfony/swiftmailer-bundle": "^2.3",
+      "symfony/monolog-bundle": "^2.8",
+      "sensio/distribution-bundle": "^5.0",
+      "sensio/framework-extra-bundle": "^3.0.2",
+      "incenteev/composer-parameter-handler": "^2.0",
+      "jms/serializer-bundle": "^1.1",
+      "mylaps/mylaps-php-sdk": "dev-develop",
+      "mylaps/mylaps-php-ccnet-sdk": "dev-develop",
+      "mylaps/symfony-ccnetbundle": "dev-develop",
+      "sonata-project/intl-bundle": "dev-master",
+      "mylaps/symfony-foundationbundle": "dev-feature/support",
+      "datatables/datatables": "^1.10",
+      "datatables/plugins": "1.0.*",
+      "datatables/responsive": "1.0.*",
+      "gregwar/image-bundle": "dev-master",
+      "egulias/email-validator": "~1.2",
+      "imagine/imagine": "~0.5.0",
+      "friendsofsymfony/rest-bundle": "^2.0",
+      "nelmio/api-doc-bundle": "^2.13",
+        "symfony/filesystem": "^3.1",
+        "lexik/jwt-authentication-bundle": "^1.7"
+
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^2.7"
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "5.5.9"
+        }
+    }
+}

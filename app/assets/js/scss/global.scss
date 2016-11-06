@@ -1,0 +1,18 @@
+@import './settings';
+@import './layout';
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $body-font-family;
+}
+
+a {
+  color: $secondary-color;
+
+  &:hover {
+    color: $secondary-hover-color;
+  }
+}

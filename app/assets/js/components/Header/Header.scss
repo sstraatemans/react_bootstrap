@@ -1,0 +1,18 @@
+@import './../../scss/settings';
+
+.header {
+  display: flex;
+  padding: rem-calc(4) rem-calc(10);
+  flex-direction: row;
+  justify-content: flex-end;
+
+  &__logo {
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 100px 17px;
+    width: 200px;
+    height: 34px;
+
+    flex-grow: 1;
+  }
+}

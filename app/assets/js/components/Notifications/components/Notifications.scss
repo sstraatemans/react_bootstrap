@@ -1,0 +1,32 @@
+@import './../../../scss/settings';
+
+.notifications {
+  position: fixed;
+  width: 100%;
+}
+
+
+.notification {
+  padding: rem-calc(6) rem-calc(10);
+  font-size: rem-calc(12);
+
+  &--info {
+    background-color: $primary-color;
+    color: $notification-font-color;
+  }
+
+  &[data-remove] {
+    animation: remove-notification 200ms linear 1 forwards;
+  }
+}
+
+
+@keyframes remove-notification {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
