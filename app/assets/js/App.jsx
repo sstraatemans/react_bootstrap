@@ -16,12 +16,14 @@ import { Notifications } from './components/Notifications';
 
 var App = () => (
     <Provider store={AppStore}>
+      <div>
         <Notifications />
         <Router history={browserHistory}>
           <Route path='/' component={Header} />
 
             <Redirect from='*' to='/404' />
         </Router>
+      </div>  
     </Provider>
 );
 

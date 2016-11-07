@@ -8,7 +8,7 @@ export const Header = React.createClass({
     return (
       <div className="header">
         <div className="header__logo"></div>
-        Header2333
+        Header
       </div>
     );
   }

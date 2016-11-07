@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --content-base dist",
+    "dev": "webpack --watch --config webpack.config.js",
     "build": "webpack --config webpack.min.config.js",
     "test": "mocha-webpack --webpack-config webpack.config-test.js \"app/assets/js/**/*.spec.js\""
   },
@@ -48,7 +48,6 @@
     "style-loader": "^0.13.1",
     "svg-url-loader": "^1.1.0",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2",
     "webpack-node-externals": "^1.4.3",
     "webpack-stream": "^3.2.0"
   },

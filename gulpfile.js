@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var hologram = require('gulp-hologram');
 var copy = require('gulp-copy');
 var sync    = require('run-sequence');
+var browser = require('browser-sync');
 
 /*
 map of paths for using with the tasks below
@@ -27,6 +28,16 @@ gulp.task('hologram', function() {
                 .pipe(hologram({logging:true}));
 });
 
+gulp.task('serve', function() {
+  browser({
+    port: process.env.PORT || 4500,
+    open: false,
+    ghostMode: false,
+    server: {
+      baseDir: 'dist'
+    }
+  });
+});
 
 gulp.task('default', function() {
   sync('copy');

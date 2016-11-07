@@ -68,3 +68,8 @@ To just copy and build everything once:
 ```
     $ gulp
 ```  
+
+
+$npm install -g json-server  
+$json-server -p 5000 myjson.json  
+https://www.npmjs.com/package/json-server
