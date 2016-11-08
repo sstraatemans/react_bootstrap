@@ -1,11 +1,9 @@
 import React from "react";
 import PubSub from "pubsub-js";
-import "./Header.scss";
-import {Content} from "./../Content/Content";
-import {Footer} from "./../Footer/Footer";
 
 
-export const Header = React.createClass({
+
+export const Footer = React.createClass({
   getInitialState: function() {
     return { counter: 0 };
   },
@@ -18,19 +16,11 @@ export const Header = React.createClass({
   componentWillUnmount: function() {
     PubSub.unsubscribe(this.pubsub_token);
   },
-
-
-
-
   render: function() {
     return (
-      <div className="header">
-        <div className="header__logo"></div>
-        Header
+      <div>
+        Footer
          - counter: {this.state.counter}
-        <Content/>
-        <Content/>
-        <Footer/>
       </div>
     );
   }
