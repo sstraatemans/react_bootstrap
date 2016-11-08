@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+
 import Route from "react-router/lib/Route";
 import Router from "react-router/lib/Router";
 import IndexRoute from "react-router/lib/IndexRoute";
@@ -8,22 +10,23 @@ import browserHistory from "react-router/lib/browserHistory";
 
 import "./scss/global.scss";
 
-import { Header } from "./components/Header/Header";
+import {Header} from "./components/Header/Header";
 import { Provider } from "react-redux";
 import { AppStore } from "./Store/Store";
 
 import { Notifications } from './components/Notifications';
 
+
 var App = () => (
     <Provider store={AppStore}>
-      <div>
-        <Notifications />
-        <Router history={browserHistory}>
-          <Route path='/' component={Header} />
+        <div>
+          <Notifications />
+          <Router history={browserHistory}>
+            <Route path='/' component={Header} />
 
-            <Redirect from='*' to='/404' />
-        </Router>
-      </div>  
+              <Redirect from='*' to='/404' />
+          </Router>
+        </div>
     </Provider>
 );
 
