@@ -6,7 +6,7 @@ import { reducer as notificationReducer } from './../components/Notifications';
 
 
 const reducers = combineReducers({
-  DeviceState: deviceReducer,
+  CountState: deviceReducer,
   NotificationState: notificationReducer
 });
 

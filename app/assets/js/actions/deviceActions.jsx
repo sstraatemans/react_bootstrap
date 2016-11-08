@@ -1,9 +1,8 @@
 import * as types from "./actionTypes";
 
 
-export function getDevicesSuccess(devices) {
+export function CountUp() {
   return {
-    type: types.GET_DEVICES_SUCCESS,
-    devices
+    type: types.COUNT_UP
   };
 };

@@ -1,12 +1,12 @@
 import * as types from "./../actions/actionTypes";
 
-const initialState = [];
+const initialState = 0;
 
 
 export function deviceReducer(state = initialState, action)  {
   switch (action.type) {
-      case types.GET_DEVICES_SUCCESS:
-        const newState = action.devices;
+      case types.COUNT_UP:
+        let newState = state+1;
         return newState;
       default:
         return state;

@@ -3,6 +3,8 @@ import PubSub from "pubsub-js";
 import "./Header.scss";
 import {Content} from "./../Content/Content";
 import {Footer} from "./../Footer/Footer";
+import ShowData from "./../ShowData/ShowData";
+import GetData from "./../GetData/GetData";
 
 
 export const Header = React.createClass({
@@ -10,7 +12,7 @@ export const Header = React.createClass({
     return { counter: 0 };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     this.pubsub_token = PubSub.subscribe('clicker', function(topic, product) {
       this.setState({ counter: this.state.counter+1 });
     }.bind(this));
@@ -31,6 +33,11 @@ export const Header = React.createClass({
         <Content/>
         <Content/>
         <Footer/>
+        <hr/>
+        <h2>Redux</h2>
+        <ShowData/>
+        <GetData/>
+
       </div>
     );
   }
