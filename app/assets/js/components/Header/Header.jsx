@@ -37,6 +37,7 @@ export const Header = React.createClass({
         <h2>Redux</h2>
         <ShowData/>
         <GetData/>
+        <hr/>
 
       </div>
     );
