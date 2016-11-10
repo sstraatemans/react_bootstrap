@@ -3,4 +3,11 @@
 .header {
   background-color: $header-bg-color;
   height: rem-calc(150);
+
+  &__logo {
+    padding: 10px 0;
+    img {
+      width: rem-calc(200);
+    }
+  }
 }

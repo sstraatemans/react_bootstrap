@@ -38,20 +38,25 @@ const Search = React.createClass({
 
   render: function() {
     return (
-      <div className="search">
-        <input type="text" name="q" placeholder="Company name" onChange={this.handleInput}/>
-        <select name="countryCode"  onChange={this.handleCountry}>
-          <option value="">Select a Country</option>
-          <option value="BE">Belgium</option>
-          <option value="FR">France</option>
-          <option value="IT">Italy</option>
-          <option value="IR">Ireland</option>
-          <option value="UK">Great Britain</option>
-          <option value="FI">Finland</option>
-          <option value="NO">Norway</option>
-          <option value="SE">Sweden</option>
-        </select>
-        <button className="search__button" onClick={this.submitForm}>Search</button>
+      <div className="wrapper">
+        <div className="search">
+          <div className="search__bar">
+            <input className="search__input" type="text" name="q" placeholder="Company name" onChange={this.handleInput}/>
+            <select className="search__select" name="countryCode"  onChange={this.handleCountry}>
+              <option value="">Select a Country</option>
+              <option value="BE">Belgium</option>
+              <option value="FR">France</option>
+              <option value="IT">Italy</option>
+              <option value="IR">Ireland</option>
+              <option value="UK">Great Britain</option>
+              <option value="FI">Finland</option>
+              <option value="NO">Norway</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+            </select>
+            <button className="search__button" onClick={this.submitForm}>Search</button>
+          </div>
+        </div>
       </div>
     );
   }

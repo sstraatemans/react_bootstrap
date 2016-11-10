@@ -1,1 +1,47 @@
 @import './../../scss/settings';
+
+.search{
+
+  padding: rem-calc(10);
+  background-color: $search-bg-color;
+  border-radius: 3px;
+  margin: 0 0 20px 0;
+
+  &__bar{
+    position: relative;
+    width: 100%;
+    height: rem-calc(40);
+    border-radius: 3px;
+    background-color: $searchbar-bg-color;
+  }
+
+  &__input {
+    border: 0;
+    width: 70%;
+    box-sizing: content-box;
+    line-height: 38px;
+    padding: 0 10px;
+  }
+
+  &__select {
+    width: 20%;
+    border: 0;
+    line-height: 38px;
+    background-color: transparent;
+  }
+
+  &__button {
+    position: absolute;
+    right: 0px;
+    border: 0px;
+    padding-right:20px;
+    padding-left:20px;
+    background-color: $button-bg-color;
+    border-top-left-radius:0;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    border-bottom-left-radius:0;
+    line-height: 36px;
+    color: $button-color;
+  }
+}

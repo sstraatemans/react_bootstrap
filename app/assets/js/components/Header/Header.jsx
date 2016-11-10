@@ -26,7 +26,9 @@ export const Header = React.createClass({
     return (
       <div className="header">
         <div className="wrapper">
-          <div className="header__logo"></div>
+          <div className="header__logo">
+            <img src="https://company.info/gui/img/company-info.png" />
+          </div>
           <Search/>
         </div>
       </div>
