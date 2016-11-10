@@ -1,2 +1,10 @@
-// Devices
-export const COUNT_UP = "COUNT_UP";
+// SEARCH
+export const GET_SEARCH_RESULTS = "GET_SEARCH_RESULTS";
+
+
+//SEARHINPUT
+export const SET_SEARCH_TEXT = "SET_SEARCH_TEXT";
+export const GET_SEARCH_TEXT = "GET_SEARCH_TEXT";
+
+export const SET_SEARCH_COUNTRY = "SET_SEARCH_COUNTRY";
+export const GET_SEARCH_COUNTRY = "GET_SEARCH_COUNTRY";

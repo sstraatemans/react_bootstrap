@@ -10,7 +10,7 @@ import browserHistory from "react-router/lib/browserHistory";
 
 import "./scss/global.scss";
 
-import {Header} from "./components/Header/Header";
+import {Layout} from "./components/Layout/Layout";
 import { Provider } from "react-redux";
 import { AppStore } from "./Store/Store";
 
@@ -22,7 +22,7 @@ var App = () => (
         <div>
           <Notifications />
           <Router history={browserHistory}>
-            <Route path='/' component={Header} />
+            <Route path='/' component={Layout} />
 
               <Redirect from='*' to='/404' />
           </Router>

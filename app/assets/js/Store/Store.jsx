@@ -1,12 +1,14 @@
 import { createStore, combineReducers } from "redux";
 import { connect } from "react-redux";
-import {deviceReducer} from "./../reducers/deviceReducer";
+import {searchReducer} from "./../reducers/searchReducer";
+import {searchInputReducer} from "./../reducers/searchInputReducer";
 import { reducer as notificationReducer } from './../components/Notifications';
 
 
 
 const reducers = combineReducers({
-  CountState: deviceReducer,
+  SearchState: searchReducer,
+  SearchInputState: searchInputReducer,
   NotificationState: notificationReducer
 });
 
