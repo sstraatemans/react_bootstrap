@@ -1,11 +1,10 @@
 import React from "react";
 import PubSub from "pubsub-js";
-import "./Layout.scss";
+import "./Home.scss";
 import { Header } from "./../Header/Header";
-import Search from "./../Search/Search";
 import Results from "./../Results/Results";
 
-export const Layout = React.createClass({
+export const Home = React.createClass({
 
   componentWillMount() {
   },
@@ -20,7 +19,7 @@ export const Layout = React.createClass({
     return (
       <div className="layout">
         <Header/>
-        <Search/>
+
         <Results/>
 
       </div>

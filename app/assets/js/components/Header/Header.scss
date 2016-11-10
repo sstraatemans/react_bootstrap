@@ -1,1 +1,6 @@
 @import './../../scss/settings';
+
+.header {
+  background-color: $header-bg-color;
+  height: rem-calc(150);
+}

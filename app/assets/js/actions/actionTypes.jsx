@@ -8,3 +8,6 @@ export const GET_SEARCH_TEXT = "GET_SEARCH_TEXT";
 
 export const SET_SEARCH_COUNTRY = "SET_SEARCH_COUNTRY";
 export const GET_SEARCH_COUNTRY = "GET_SEARCH_COUNTRY";
+
+//Company
+export const GET_COMPANY = "GET_COMPANY";

@@ -7,3 +7,10 @@ export function ActionGetSearchResults(results) {
     results
   };
 };
+
+export function ActionGetCompany(company) {
+  return {
+    type: types.GET_COMPANY,
+    company
+  };
+};

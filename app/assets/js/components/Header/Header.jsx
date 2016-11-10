@@ -1,6 +1,7 @@
 import React from "react";
 import PubSub from "pubsub-js";
 import "./Header.scss";
+import Search from "./../Search/Search";
 
 
 
@@ -24,8 +25,10 @@ export const Header = React.createClass({
   render: function() {
     return (
       <div className="header">
-        <div className="header__logo"></div>
-        Header
+        <div className="wrapper">
+          <div className="header__logo"></div>
+          <Search/>
+        </div>
       </div>
     );
   }

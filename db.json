@@ -2,5 +2,8 @@
   "results": [
     { "id": 1, "name": "Webservices", "country": "NO" },
     { "id": 2, "name": "Company.info", "country": "BE" }
+  ],
+  "companies": [
+    { "id": 1, "name": "Webservicesextra", "country": "NO" }
   ]
 }

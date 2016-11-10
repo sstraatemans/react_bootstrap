@@ -1,16 +1,25 @@
 import axios from "axios";
 import {AppStore} from "./../Store/Store";
-import { ActionGetSearchResults } from "./../actions/searchActions";
+import { ActionGetSearchResults, ActionGetCompany } from "./../actions/searchActions";
 import * as EndPoints from "./endPoints";
 
 
 /**
- * Get all devices
+ * Get all Companies
  */
 export function GetSearchResults(search) {
   return axios.get(`${EndPoints.GET_RESULTS}?country=${search.country}&name=${search.name}`)
     .then(response => {
       AppStore.dispatch(ActionGetSearchResults(response.data));
+      return response;
+    });
+}
+
+
+export function GetCompany(id) {
+  return axios.get(`${EndPoints.GET_COMPANY}/${id}`)
+    .then(response => {
+      AppStore.dispatch(ActionGetCompany(response.data));
       return response;
     });
 }

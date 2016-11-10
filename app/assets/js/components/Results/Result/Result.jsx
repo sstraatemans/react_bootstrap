@@ -1,6 +1,6 @@
 import React from "react";
 import "./Result.scss";
-
+import { Link } from 'react-router';
 
 
 export const Result = React.createClass({
@@ -11,7 +11,7 @@ export const Result = React.createClass({
   render: function() {
     return (
       <div className="result">
-        {this.props.name}
+        <Link to={`/companies/${this.props.id}`}>{this.props.name}</Link>
       </div>
     );
   }
