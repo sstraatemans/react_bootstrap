@@ -21,6 +21,8 @@ $color-bg-danger: $secondary-color;
 $color-bg-warning: $warning-color;
 $color-bg-success: $success-color;
 
+$border-color: #66767D;
+
 
 $body-font-size: 16px;
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -41,6 +43,9 @@ $header-bg-color: #4cadc4;
 $search-bg-color: rgba(255,255,255,0.5);
 $searchbar-bg-color: #FFF;
 
+
+//result
+$result-bg-color-hover: rgba(76, 173, 196, .5);
 
 //notifications
 $notification-font-color: rgba(255, 255, 255, .75);

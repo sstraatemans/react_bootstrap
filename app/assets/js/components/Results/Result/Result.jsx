@@ -10,9 +10,9 @@ export const Result = React.createClass({
 
   render: function() {
     return (
-      <div className="result">
-        <Link to={`/companies/${this.props.id}`}>{this.props.name}</Link>
-      </div>
+      <li className="result">
+        <Link to={`/companies/${this.props.dnb_key}`}>{this.props.trade_name}</Link>
+      </li>
     );
   }
 });

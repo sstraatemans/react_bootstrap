@@ -43,5 +43,9 @@
     border-bottom-left-radius:0;
     line-height: 36px;
     color: $button-color;
+    &:focus {
+      outline:0;
+    }
+
   }
 }

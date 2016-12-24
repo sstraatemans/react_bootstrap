@@ -23,12 +23,14 @@ const Results = React.createClass({
 
   render: function() {
     return (
-      <div className="results">
-        {
-          this.props.searchState.map(function(res){
-            return (<Result {...res} key={res.id}/>);
-          })
-        }
+      <div className="wrapper">
+        <ul className="results">
+          {
+            this.props.searchState.map(function(res){
+              return (<Result {...res} key={res.dnb_key}/>);
+            })
+          }
+        </ul>
       </div>
     );
   }

@@ -1,1 +1,10 @@
 @import './../../../scss/settings';
+
+.result {
+  padding: 20px;
+  list-style-type: none;
+  border-bottom: 1px solid $border-color;
+  &:hover {
+    background-color: $result-bg-color-hover;
+  }
+}

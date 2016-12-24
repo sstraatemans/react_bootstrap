@@ -1,5 +1,6 @@
 import React from "react";
 import PubSub from "pubsub-js";
+import { browserHistory } from './react-router';
 import { AppStore } from "./../../Store/Store";
 import { connect } from "react-redux";
 import {GetSearchResults} from "./../../api/companyAPI";
@@ -12,12 +13,13 @@ const Search = React.createClass({
     return {
       name: "",
       country: ""
-    }
+    };
   },
   componentWillMount() {
-    // this.pubsub_token = PubSub.subscribe('clicker', function(topic, product) {
-    //   this.setState({ counter: this.state.counter+1 });
-    // }.bind(this));
+    this.state.name = localStorage.getItem("searchText");
+    this.state.country = localStorage.getItem("searchCountry");
+
+    this.submitForm();
   },
   componentWillUnmount: function() {
     // PubSub.unsubscribe(this.pubsub_token);
@@ -25,7 +27,12 @@ const Search = React.createClass({
 
   submitForm: function() {
     //const text = this.state.SearchInputState.text;
+    localStorage.setItem('searchText', this.state.name);
+    localStorage.setItem('searchCountry', this.state.country);
     GetSearchResults(this.state);
+
+    browserHistory.transitionTo('/');
+
   },
   handleInput: function(e){
     this.state.name = e.target.value;
@@ -33,16 +40,19 @@ const Search = React.createClass({
   },
   handleCountry: function(e){
     this.state.country = e.target.options[e.target.selectedIndex].value;
+
   },
 
 
   render: function() {
+    let name = this.state.name;
+    let country = this.state.country;
     return (
       <div className="wrapper">
         <div className="search">
           <div className="search__bar">
-            <input className="search__input" type="text" name="q" placeholder="Company name" onChange={this.handleInput}/>
-            <select className="search__select" name="countryCode"  onChange={this.handleCountry}>
+            <input className="search__input" type="text" name="q" value={name} placeholder="Company name" onChange={this.handleInput}/>
+            <select className="search__select" name="countryCode" defaultValue={country}  onChange={this.handleCountry}>
               <option value="">Select a Country</option>
               <option value="BE">Belgium</option>
               <option value="FR">France</option>

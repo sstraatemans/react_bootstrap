@@ -8,7 +8,7 @@ import * as EndPoints from "./endPoints";
  * Get all Companies
  */
 export function GetSearchResults(search) {
-  return axios.get(`${EndPoints.GET_RESULTS}?country=${search.country}&name=${search.name}`)
+  return axios.get(`${EndPoints.GET_RESULTS}?country_iso2=${search.country}&trade_name=${search.name}`)
     .then(response => {
       AppStore.dispatch(ActionGetSearchResults(response.data));
       return response;
